@@ -14,3 +14,19 @@ function custom_theme_google_fonts() {
     wp_enqueue_style('google-fonts-3', 'https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 }
 add_action('wp_enqueue_scripts', 'custom_theme_google_fonts');
+
+function create_missions_post_type() {
+    register_post_type('missions',
+        array(
+            'labels' => array(
+                'name' => __('Missions'),
+                'singular_name' => __('Mission')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'missions'),
+            'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields')
+        )
+    );
+}
+add_action('init', 'create_missions_post_type');

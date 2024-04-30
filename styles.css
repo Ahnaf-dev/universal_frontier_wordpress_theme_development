@@ -154,6 +154,10 @@ section {
   margin-bottom: 2.4rem;
 }
 
+.content-card__date {
+  margin-right: 0.3rem;
+}
+
 .content-card__link {
   font-size: 2rem;
   font-weight: bold;
