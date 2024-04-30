@@ -394,7 +394,7 @@ header .logo {
   margin-bottom: 24px;
 }
 
-.featured button {
+.featured a {
   margin-top: 24px;
 }
 
@@ -402,6 +402,7 @@ header .logo {
   padding: 0px;
   background-color: transparent;
   width: 11rem;
+  
 }
 
 .read-more-btn--featured:hover {

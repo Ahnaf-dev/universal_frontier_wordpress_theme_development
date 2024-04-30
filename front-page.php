@@ -40,7 +40,7 @@
 $missions_query = new WP_Query(array(
     'post_type' => 'missions', 
     'posts_per_page' => 3, 
-    'order' => 'DESC', 
+    'order' => 'ASC', 
 ));
 
 if ($missions_query->have_posts()) :
@@ -94,11 +94,71 @@ if ($missions_query->have_posts()) :
     // Restore original post data
     wp_reset_postdata();
 else :
-    // If no posts found
     echo 'No missions found.';
 endif;
 ?>
+          <a href="#" class="content-card__more">
+            <p>More Missions</p>
+          </a>
           </div>
       </div>
     </section>
+    <?php
+$specific_post_id = 31; 
+
+$args = array(
+    'post_type' => 'missions', 
+    'post__in' => array($specific_post_id),
+);
+
+$specific_post_query = new WP_Query($args);
+
+if ($specific_post_query->have_posts()) :
+    while ($specific_post_query->have_posts()) : $specific_post_query->the_post();
+    $featured_thumbnail = get_field('mission_thumbnail');
+
+      ?> 
+      <section
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('<?php echo esc_url($featured_thumbnail['url']); ?>');
+      "
+      class="featured"
+    >
+      <div class="container">
+        <span>Featured Story</span>
+        <h2><?php the_title()?></h2>
+        <p>
+        <?php the_excerpt()?>
+        </p>
+        <a class="read-more-btn read-more-btn--featured" href="<?php echo esc_url( get_permalink() ); ?>">
+        Read
+          <svg
+            width="30"
+            height="19"
+            viewBox="0 0 30 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M28.5416 9.33329L1.45841 9.24461M28.5416 9.33329L20.181 17.6393M28.5416 9.33329L20.2356 0.972715"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+      </a>
+       
+      </div>
+    </section>
+     <?php 
+    endwhile;
+    wp_reset_postdata();
+else :
+    echo 'No posts found.';
+endif;
+?>
+   
 <?php get_footer(); ?>
