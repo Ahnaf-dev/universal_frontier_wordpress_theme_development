@@ -97,7 +97,7 @@ else :
     echo 'No missions found.';
 endif;
 ?>
-          <a href="#" class="content-card__more">
+          <a href="<?php echo site_url("/explorations") ?>" class="content-card__more">
             <p>More Missions</p>
           </a>
           </div>
@@ -225,7 +225,7 @@ else :
     echo 'No missions found.';
 endif;
 ?>
-<a href="#" class="content-card__more">
+<a href="<?php echo site_url("/blog") ?>" class="content-card__more">
             <p>More Blog Posts</p>
           </a>
     </div>

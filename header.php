@@ -6,7 +6,7 @@
     <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body >
 <header>
       <div class="container">
         <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -17,7 +17,7 @@
           <ul class="links">
             <li><a href="<?php echo site_url("/explorations") ?>">Explorations</a></li>
             <li><a href="<?php echo site_url('/about-2'); ?>">About</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="<?php echo site_url("/blog") ?>">Blog</a></li>
             <svg
               width="30"
               height="30"
