@@ -535,3 +535,32 @@ footer span {
     justify-content: space-between;
   }
 }
+
+.mission-section--vh {
+  min-height: calc(100vh - 185px);
+}
+
+.pagination {
+  color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.6rem;
+    margin-top: 6rem;
+}
+
+
+.pagination .current {
+  color: #15516b;
+  font-weight: 700;
+}
+
+.pagination a {
+  color: black;
+}
+
+.pagination span {
+  font-family: "Inter", sans-serif;
+
+}

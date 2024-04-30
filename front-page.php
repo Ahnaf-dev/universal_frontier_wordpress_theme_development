@@ -13,7 +13,7 @@
           Embarking on a Boundless Odyssey: Empowering Humanity's Journey Beyond
           the Stars.
         </p>
-        <a class="read-more-btn" href="/about.html">
+        <a class="read-more-btn" href="<?php echo site_url('/about-2'); ?>">
           Read More
           <svg
             width="30"

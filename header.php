@@ -15,8 +15,8 @@
         </a>
         <nav class="menu">
           <ul class="links">
-            <li><a href="#">Explorations</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="<?php echo site_url("/explorations") ?>">Explorations</a></li>
+            <li><a href="<?php echo site_url('/about-2'); ?>">About</a></li>
             <li><a href="#">Blog</a></li>
             <svg
               width="30"
