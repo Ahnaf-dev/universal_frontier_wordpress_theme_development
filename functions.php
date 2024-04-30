@@ -30,3 +30,5 @@ function create_missions_post_type() {
     );
 }
 add_action('init', 'create_missions_post_type');
+
+add_theme_support('post-thumbnails');
