@@ -66,7 +66,7 @@ if ($missions_query->have_posts()) :
                 
                 </h3>
                 <div class="content-card__dates">
-                  <p class="content-card__date"><?php echo the_date(); ?> </p>
+                  <p class="content-card__date"><?php the_time('m/d/y'); ?> </p>
                   <p class="content-card__time"> - <?php echo get_field("read_time"); ?> min read</p>
                 </div>
                 <div class="content-card__link-flex">
