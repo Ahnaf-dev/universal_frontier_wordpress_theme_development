@@ -564,3 +564,32 @@ footer span {
   font-family: "Inter", sans-serif;
 
 }
+
+.search-form .read-more-btn {
+  height: 40px;
+  border-radius: 0px;
+  width: fit-content;
+  font-size: 12px;
+}
+
+.search-form{
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+
+.search-form input {
+  height: 40px;
+  padding: 0px 8px;
+}
+
+section.search {
+  min-height: calc(100vh - 185px);
+}
+
+.search h2 {
+  margin-bottom: 2.4rem;
+}
+
+.search-link {
+  height: 30px;
+}

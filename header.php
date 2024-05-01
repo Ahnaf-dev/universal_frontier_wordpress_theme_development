@@ -18,6 +18,7 @@
             <li><a href="<?php echo site_url("/explorations") ?>">Explorations</a></li>
             <li><a href="<?php echo site_url('/about-2'); ?>">About</a></li>
             <li><a href="<?php echo site_url("/blog") ?>">Blog</a></li>
+            <a class="search-link" href="<?php echo site_url("/?s") ?>">
             <svg
               width="30"
               height="30"
@@ -30,6 +31,8 @@
                 fill="white"
               />
             </svg>
+          
+          </a>
           </ul>
         </nav>
         <button aria-haspopup="true" aria-expanded="false" class="hamburger">
