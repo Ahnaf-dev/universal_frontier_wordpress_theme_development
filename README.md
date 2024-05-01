@@ -6,7 +6,7 @@ Universal Frontier is a custom WordPress theme that manages space exploration co
 
 ### Frontend
 * **Languages**: HTML5, CSS3, JavaScript, PHP
-* **Frameworks**: WordPress
+* **CMS**: WordPress
   
 ## Technical Features
 
